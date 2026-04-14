@@ -117,7 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')   
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
@@ -129,3 +129,5 @@ LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/tweet/'
 
 LOGOUT_REDIRECT_URL = '/tweet/'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
