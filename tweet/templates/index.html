@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   TweetBar | Welcome
+{% endblock %}
+
+{% block content %}
+<section class="hero text-center fade-in">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="hero-title">Share your thoughts with the <span style="background: linear-gradient(90deg, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">World.</span></h1>
+            <p class="hero-subtitle">TweetBar is the place where ideas take flight. Join thousands of users sharing their stories every day.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="{% url 'tweet_list' %}" class="btn btn-primary-custom">Explore Feed</a>
+                <a href="{% url 'register' %}" class="btn btn-outline-light rounded-pill px-4 py-2">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features py-5">
+    <div class="row g-4 mt-4">
+        <div class="col-md-4">
+            <div class="glass p-4 h-100 card-tweet">
+                <div class="mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#818cf8" class="bi bi-lightning-fill" viewBox="0 0 16 16">
+                        <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/>
+                    </svg>
+                </div>
+                <h4 class="text-white fw-bold">Instant Sharing</h4>
+                <p class="text-muted">Post your thoughts, updates, and news in real-time. Our platform is built for speed and simplicity.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="glass p-4 h-100 card-tweet">
+                <div class="mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#c084fc" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </div>
+                <h4 class="text-white fw-bold">Explore Content</h4>
+                <p class="text-muted">Discover interesting people and topics. Search through thousands of tweets to find what matters to you.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="glass p-4 h-100 card-tweet">
+                <div class="mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#10b981" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                    </svg>
+                </div>
+                <h4 class="text-white fw-bold">Connect</h4>
+                <p class="text-muted">Engage with a community of thinkers, creators, and doers. Share, like, and grow your presence.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta py-5 mt-5">
+    <div class="glass p-5 text-center">
+        <h2 class="text-white fw-bold mb-3">Ready to join the conversation?</h2>
+        <p class="text-muted mb-4">Create an account today and start sharing your voice with the world.</p>
+        <a href="{% url 'register' %}" class="btn btn-primary-custom btn-lg">Join TweetBar Now</a>
+    </div>
+</section>
+{% endblock %}
